@@ -4,8 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Getter
 @Setter
@@ -49,6 +52,21 @@ public class LibraryAroundTheCorner implements I_BookLibrary {
     @Override
     public List<String> uniqueAuthorsBefore(LocalDate publishDate) {
         return new ArrayList<>();
+    }
+
+    @Override
+    public Map<Year, List<Book>> booksByYear() {
+        return new HashMap<>();
+    }
+
+    @Override
+    public Map<String, String> authorByIsbn() {
+        return new HashMap<>();
+    }
+
+    @Override
+    public Map<String, Book> bookByIsbn() {
+        return new HashMap<>();
     }
 
     @Override

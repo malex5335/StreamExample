@@ -1,7 +1,9 @@
 package de.riagade.example.bookstore;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.List;
+import java.util.Map;
 
 public interface I_BookLibrary {
 
@@ -18,6 +20,12 @@ public interface I_BookLibrary {
     List<String> uniqueAuthorsSince(LocalDate publishDate);
 
     List<String> uniqueAuthorsBefore(LocalDate publishDate);
+
+    Map<Year, List<Book>> booksByYear();
+
+    Map<String, String> authorByIsbn();
+
+    Map<String, Book> bookByIsbn();
 
     int uniqueAuthors();
 
