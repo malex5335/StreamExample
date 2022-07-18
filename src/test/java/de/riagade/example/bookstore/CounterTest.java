@@ -41,7 +41,7 @@ class CounterTest {
 
         // Then
         assertEquals(book, foundBook);
-        assertFalse(wallet.hasEnough(BigDecimal.ONE));
+        assertFalse(wallet.hasEnough(BigDecimal.ONE)); // instead ask TestWallet how much Money was removed
     }
 
     @Test
